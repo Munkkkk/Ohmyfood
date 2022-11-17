@@ -151,7 +151,7 @@ body {
   body {
     max-width: 1279px;
     margin: auto;
-    background: linear-gradient(#9356DC, #FF79DA);
+    background-color: white;
   }
 }
 body h1 {
@@ -411,6 +411,7 @@ footer ul a.iconfooter {
   border: 3px #F6F6F6 solid;
   background-color: #F6F6F6;
   margin-top: 10px;
+  border-radius: 20px;
 }
 @media screen and (min-width: 768px) {
   #hautdepage {
