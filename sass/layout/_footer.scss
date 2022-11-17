@@ -1,0 +1,57 @@
+footer
+{
+    background-color: $color-footer;
+    color: white;
+    width: 100%;
+    padding: 20px 0 20px 0;
+
+    img
+    {
+        width: 144px;
+        margin: 10px 0 0 30px;
+        padding-bottom: 5px;
+
+        @include tablet
+        {
+            display: block;
+            margin: auto;
+            width: 180px;
+            margin-bottom: 35px;
+        }
+    }
+
+    ul
+    {
+        list-style-type: none;
+        padding-left: 0px;
+        margin-left: $margin15;
+
+        @include tablet
+        {
+            display: flex;
+            justify-content: space-around;
+            font-size: 1.2em;
+        }
+        
+        li
+        {
+            line-height: 30px;
+            margin-left: $margin15;
+
+            @include tablet
+            {
+                margin-left: -40px;
+            }
+        }
+            a
+            {
+                @include a-modif;
+                color: white;
+
+                &.iconfooter
+                {
+                    margin-left: $margin15;
+                }
+            }
+    }
+}

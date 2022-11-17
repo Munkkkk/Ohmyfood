@@ -1,0 +1,196 @@
+  /*ANIMATION APPEAR CARD MENU */
+
+.animation-card
+{
+  animation-name: appear;
+  animation-duration: 1000ms;
+  animation-fill-mode: backwards;
+}
+
+.animation-entree
+{
+  animation-delay: .25s;
+}
+
+.animation-plat
+{
+  animation-delay: .50s;
+}
+
+.animation-dessert
+{
+  animation-delay: .75s;
+}
+
+@keyframes appear 
+{
+  from 
+  {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  to 
+  {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+  
+  /* ANIMATION HEART MENU */ 
+                                    /* Before animation */
+
+.btn-heart
+{
+    .full-heart
+    {
+        position: absolute;
+        right: 12px;
+        top: 6px;
+        background: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        font-size: 1em;
+    }
+
+    .empty-heart
+    {
+        position: absolute;
+        right: 6px;
+        top: 0px;
+    }
+
+                                    /* After animation */
+
+
+    &:focus
+    {
+        .full-heart
+        {
+          opacity: 1;
+          font-size: 2em;
+          right: 6px;
+          top: 0px;
+          transition-duration: .60s;
+        }
+  
+        .empty-heart
+        {
+          transition-duration: 1s;
+          opacity: 0;
+        }
+    }
+}
+
+                                                                                /* ANIMATION BTN-CHECK */
+                                    /* Before animation */
+
+.card
+{
+    position: relative;
+    overflow: hidden;
+
+    .btn-check
+    {
+    border: 0;
+    position: absolute;
+    top: 0px;
+    right: -100px;
+    background-color: $color-tertiary;
+    height: 100%;
+    width: 65px;
+    border-radius: 0 20px 20px 0;
+    transition-duration: .55s;
+
+    .fa-circle-check
+    {
+        color: white;
+        transform: rotate(220deg);
+        transition-duration: .60s;
+    }
+}
+
+                                    /* After animation */
+
+    &:hover
+    {
+        cursor: pointer;
+
+        .btn-check
+        {
+            right: 0;
+        }
+
+        .fa-circle-check
+        {
+            transform: rotate(0deg);
+        }
+
+        strong
+        {
+            margin-right: 60px;
+        }
+    }
+}
+
+                                                                        /* ANIMATION LOADING-SPINNER*/
+
+.loader-position
+{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,0.9);
+    animation: loader-background 0.01s;
+    animation-fill-mode: forwards;
+    z-index: 10000;
+    animation-delay: 1.75s;
+}
+
+.loader-spinner-logo
+{
+  border: 10px #9356DC solid;
+  border-top: 10px solid #FF79DA;
+  border-bottom: 10px solid #99E2D0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  animation: loader 1200ms linear;
+}
+
+@keyframes loader-background
+{
+  0%
+  {
+    opacity: 1;
+  }
+
+  100%
+  {
+    opacity: 0;
+    z-index: -9999;
+  }
+}
+
+@keyframes loader
+{
+  0%
+  {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  100%
+  {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,49 @@
+.headerindex 
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.headermenu
+{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    
+    a
+    {
+        @include a-modif;
+        display: block;
+        position: absolute;
+        left: 25px;
+    }
+
+    img 
+    {
+        width: 170px;
+        object-fit: cover;
+
+        @include tablet
+        {
+            width: 200px;
+        }
+    }
+}
+
+.headerindex, .headermenu
+{
+    @include desktop
+    {
+        max-width: 1279px;
+        background-color: white;
+        margin-top: 0px;
+        height: 60px;
+    }
+}

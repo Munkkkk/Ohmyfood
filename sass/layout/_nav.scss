@@ -1,0 +1,102 @@
+nav
+{
+    margin: 55px 0 55px 0;
+
+    @include desktop
+    {
+        width: 42.5%;
+        height: 500px;
+        background-color: $color-section;
+        border-radius: 20px;
+    }
+
+    h2 
+    {
+        margin-left: 20px;
+
+        @include tablet
+        {
+            text-align: center;
+        }
+    }
+
+    ol
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 290px;
+        padding-left: 0px;
+        list-style: none; 
+        counter-reset: li;
+
+        @include desktop
+        {
+            height: 400px;
+            margin-top: 45px;
+            justify-content: space-around;
+        }
+
+        li
+        {
+            display: flex;
+            align-items: center;
+            border: 1px $color-homepage-hautdepage solid;
+            background: $color-homepage-hautdepage;
+            box-shadow: 0.25rem 0.25rem 0.5rem rgb(0 0 0 / 13%);
+            border-radius: 20px;
+            height: 80px;
+            width: 90%;
+            counter-increment: li;
+
+            @include tablet
+            {
+                width: 70%;
+            }
+
+            @include desktop
+            {
+                width: 85%;
+                background-color: white;
+                font-size: 1.5em;
+            }
+
+            &:hover
+            {
+                background: lighten($color-primary, 36);
+
+                .fa-mobile-screen-button, .fa-list, .fa-store
+                {
+                    color: $color-primary;
+                }
+            }
+
+            &::before
+            {
+                    @include li-before;
+            }
+
+            a 
+            {
+                @include a-modif;
+                font-weight: bold;
+                display: block;
+                width: 280px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+
+                @include tablet
+                {
+                    width: 75%;
+                }
+            }
+        }
+    }
+
+    .fa-mobile-screen-button, .fa-list, .fa-store
+    {
+       color: $color-icon-nav;
+    }
+}

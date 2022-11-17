@@ -1,0 +1,25 @@
+.btn
+{
+  @include btn;
+
+  &:hover
+  {
+      background: linear-gradient(to right bottom, lighten($color-secondary, 5), lighten($color-primary, 5));
+      box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 45%);
+  }
+}
+
+.btn-homepage
+{
+  @include btn-homepage;
+
+  @include tablet
+  {
+      font-size: 1em;
+  }
+}
+
+.btn-heart
+{
+  @include btn-heart;
+}

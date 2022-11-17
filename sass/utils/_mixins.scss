@@ -1,0 +1,102 @@
+@mixin underline-title-menu
+{
+    border-bottom: 3px $color-tertiary solid;
+    height: 30px;
+    width: 43px;
+
+    @include desktop
+    {
+        height: 35px;
+    }
+}
+
+@mixin card
+{
+    background-color: white;
+    height: 70px;
+    margin: 15px 15px 0 15px;
+    border-radius: 20px;
+    box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+
+    @include desktop
+    {
+        width: 50%;
+        margin: $margin15 auto;
+    }
+}
+
+@mixin a-modif
+{
+    text-decoration: none;
+    color: black;
+}
+
+@mixin btn
+{
+    background: linear-gradient(to bottom right, $color-secondary, $color-primary);
+    color: white;
+    padding: 17px 43px;
+    border-radius: 60px;
+    border: none;
+    display: block;
+    margin: 46px auto auto auto;
+    font-size: 1.1rem;
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+}
+
+@mixin btn-heart
+{
+    border: none;
+    background-color: transparent;
+    width: 45px;
+    height: 34px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+}
+
+@mixin btn-homepage
+{
+    white-space: nowrap;
+    margin-top: 20px;
+    padding: 17px 20px;
+
+    @include tablet
+    {
+        padding: 17px 43px;
+    }
+}
+
+@mixin block-news
+{
+    height: 30px;
+    width: 80px;
+    text-align: center;
+    position: absolute;
+    margin-top: $margin15;
+    right: 20px;
+    border: 2px $color-tertiary solid;
+    background-color: $color-tertiary;
+    border-radius: 2px;
+}
+
+/* Li-before contient les numéros 1, 2 et 3 situés dans le menu de navigation */
+
+@mixin li-before
+{
+    content: counter(li); 
+    color: white;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    background-color: #9356DC;
+    border-radius: 50%;
+    padding: 5px 4px 5px 10px;
+    font-size: 1em;
+
+    @include desktop
+    {
+        padding-right: 0px;
+    }
+}
