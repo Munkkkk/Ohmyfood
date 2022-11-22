@@ -93,6 +93,10 @@
   margin-right: 60px;
 }
 
+#input {
+  border : none;
+  background: transparent;
+}
 
 .loader-position {
   position: fixed;
